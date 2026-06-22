@@ -1,30 +1,23 @@
-export type ProjectStatus = "Shipped" | "In Development" | "Case Study";
+export type ProjectStatus = "Shipped" | "In Development" | "Case Study" | "Completed";
+export type ProjectCategory = "Mobile App" | "Web" | "AI/ML";
 
 export interface Project {
   id: string;
   title: string;
-  /** Shown like an editor tab above the preview image, e.g. "app/page.tsx" */
   file: string;
   description: string;
-  /** Path under /public, or a full image URL */
   image: string;
-  /** Optional: link to a demo video (mp4 file under /public, or a YouTube/Loom URL) */
   video?: string;
   githubUrl?: string;
   liveUrl?: string;
   tags: string[];
   status: ProjectStatus;
   year: string;
+  category: ProjectCategory;
+  androidUrl?: string;
+  iosUrl?: string;
 }
 
-// ─────────────────────────────────────────────────────────────
-// TODO: this is placeholder content. Before publishing, replace:
-//   - image: drop real screenshots/exports into /public/projects
-//   - video: link a real demo (mp4, YouTube or Loom URL)
-//   - githubUrl / liveUrl: your real links ('#' hides the link if left empty)
-// To add a new project, just add another object to this array —
-// no other file needs to change.
-// ─────────────────────────────────────────────────────────────
 export const projects: Project[] = [
   {
     id: "mysportsnest",
@@ -32,24 +25,27 @@ export const projects: Project[] = [
     file: "mysportsnest/app.tsx",
     description:
       "A multi-sport social feed app built with React Native — covering football, cricket and beyond, with a custom feed engine and real-time client collaboration.",
-    image: "/projects/mysportsnest.svg",
+    image: "/projects/mysportsnest.png",
     githubUrl: "#",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.RealWealth.ReHo&pcampaignid=web_share&pli=1",
+    iosUrl: "#",
     tags: ["React Native", "TypeScript", "Expo", "REST API"],
-    status: "In Development",
+    status: "Completed",
     year: "2026",
+    category: "Mobile App",
   },
   {
     id: "preachly",
     title: "Preachly",
     file: "preachly/App.tsx",
     description:
-      "A cross-platform Expo app shipped to Android and iOS, with custom native build configuration and a polished onboarding flow.",
-    image: "/projects/preachly.svg",
-    githubUrl: "#",
-    liveUrl: "#",
-    tags: ["React Native", "Expo", "Android", "iOS"],
-    status: "Shipped",
-    year: "2026",
+      "Preachly is an AI-powered Christian learning app that helps users grow in faith through Bible reading, audio listening, and gamified milestones. Users earn badges for daily, weekly, and monthly achievements. Personalized onboarding and an AI faith assistant provide guidance, Bible discussions, spiritual support, and encouragement.",
+    image: "/projects/preachly.png",
+    githubUrl: "https://github.com/syfulislam763/Preachly_v2",
+    tags: ["React Native","Zustand", "Expo Bare Workflow", "JavaScript", "Cross-Platform", "AI Integration"],
+    status: "Completed",
+    year: "",
+    category: "Mobile App",
   },
   {
     id: "sports-data-explorer",
@@ -57,23 +53,40 @@ export const projects: Project[] = [
     file: "sports-explorer/page.tsx",
     description:
       "An interactive tool for browsing leagues, match schedules and fixtures, built on a live sports data API with a fast, searchable interface.",
-    image: "/projects/sports-data-explorer.svg",
+    image: "/projects/time_series_prediction.png",
     githubUrl: "#",
     liveUrl: "#",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "REST API"],
-    status: "Shipped",
-    year: "2025",
+    status: "Completed",
+    year: "",
+    category: "Web",
   },
   {
-    id: "cameraad",
-    title: "CameraAd",
-    file: "cameraad/MainActivity.kt",
+    id: "reho",
+    title: "ReHo",
+    file: "ReHo/App.tsx",
+    description:
+      "ReHo is an AI-powered personal finance management application that helps users track and manage their debts, expenses, budgets, and savings in one place. The platform provides intelligent insights and recommendations to optimize spending, improve budgeting, and achieve financial goals. With its built-in AI conversational assistant, users can receive personalized financial guidance, ask questions, and make smarter financial decisions with ease.",
+    image: "/projects/reho.png",
+    githubUrl: "https://github.com/syfulislam763/ReHo",
+    androidUrl: "https://play.google.com/store/apps/details?id=com.RealWealth.ReHo&pcampaignid=web_share&pli=1",
+    iosUrl: "https://apps.apple.com/us/app/reho/id6755340157",
+    tags: ["React Native", "JavaScript", "Cross-Platform", "Expo Bare Workflow", "AI Integration"],
+    status: "Completed",
+    year: "",
+    category: "Mobile App",
+  },
+  {
+    id: "neonova",
+    title: "Neonova",
+    file: "Neonova/App.tsx",
     description:
       "A CameraX-based Android camera app with multiple processing modes (Vivid, Natural, Portrait) and full 4K capture support.",
-    image: "/projects/cameraad.svg",
+    image: "/projects/neonova.png",
     githubUrl: "#",
     tags: ["Android", "Jetpack Compose", "CameraX", "Kotlin"],
-    status: "Shipped",
-    year: "2025",
+    status: "Completed",
+    year: "",
+    category: "Mobile App",
   },
 ];

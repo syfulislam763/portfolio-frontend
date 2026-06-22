@@ -11,7 +11,7 @@ const links = [
   { href: "/#work", label: "Projects", id: "work" },
   { href: "/#research", label: "Publications", id: "research" },
   { href: "/#experience", label: "Experience", id: "experience" },
-  { href: "/#contact", label: "Contact", id: "contact" },
+  // { href: "/#contact", label: "Contact", id: "contact" },
 ];
 
 // Section ids tracked by the scrollspy on the homepage (everything except
@@ -95,10 +95,10 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="mailto:dev.syfulislam@gmail.com"
+          href="#contact"
           className="hidden items-center rounded-full border border-ink/15 px-4 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-ink hover:text-paper md:inline-flex"
         >
-          Get in touch
+          Contact me
         </a>
 
         <button
@@ -131,8 +131,8 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <a href="mailto:dev.syfulislam@gmail.com" className="text-sm font-medium text-ink">
-            Get in touch →
+          <a href="#contact" className="text-sm font-medium text-ink">
+            Contact me →
           </a>
         </nav>
       )}

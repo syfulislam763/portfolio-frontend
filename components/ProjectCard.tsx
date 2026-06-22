@@ -3,10 +3,11 @@ import type { Project } from "@/data/projects";
 import { GithubIcon, ExternalIcon, PlayIcon } from "./Icons";
 import { StatusDot } from "./StatusDot";
 
-const statusColor: Record<Project["status"], "shipped" | "signal" | "muted"> = {
+const statusColor: Record<Project["status"], "shipped" | "signal" | "muted" | "completed"> = {
   Shipped: "shipped",
   "In Development": "signal",
   "Case Study": "muted",
+  Completed: "completed",
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -68,6 +69,26 @@ export default function ProjectCard({ project }: { project: Project }) {
               className="inline-flex items-center gap-1.5 text-sm text-ink transition-colors hover:text-signal"
             >
               <ExternalIcon className="h-3.5 w-3.5" /> Live
+            </a>
+          )}
+          {project.androidUrl && (
+            <a
+              href={project.androidUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-ink transition-colors hover:text-signal"
+            >
+              Play Store
+            </a>
+          )}
+          {project.iosUrl && (
+            <a
+              href={project.iosUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-ink transition-colors hover:text-signal"
+            >
+              Apple Store
             </a>
           )}
           {project.video && (

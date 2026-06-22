@@ -1,11 +1,16 @@
+'use client';
+import React from "react";
 import Image from "next/image";
 import Reveal from "./Reveal";
 import { StatusDot } from "./StatusDot";
 import { profile } from "@/data/profile";
+import ContactModal from "./ContactModal";
+
 
 function getYearsOfExperience(startDate: string): number {
   const start = new Date(startDate);
   const now = new Date();
+  
 
   let years = now.getFullYear() - start.getFullYear();
   const monthDiff = now.getMonth() - start.getMonth();
@@ -19,6 +24,7 @@ function getYearsOfExperience(startDate: string): number {
 
 export default function Hero() {
   const yearsOfExperience = getYearsOfExperience("2023-01-01");
+  const [open, setOpen] = React.useState(false);
   return (
     <section id="top" className="mx-auto max-w-content px-6 pb-24 pt-20 sm:pb-32 sm:pt-28 bg-[#ded7e9]">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_280px] lg:gap-16">
@@ -54,12 +60,12 @@ export default function Hero() {
               >
                 View work
               </a>
-              <a
-                href="mailto:dev.syfulislam@gmail.com"
+              <button
+                onClick={() => setOpen(true)}
                 className="inline-flex items-center font-mono text-sm text-ink transition-colors hover:text-signal"
               >
                 dev.syfulislam@gmail.com →
-              </a>
+              </button>
             </div>
           </Reveal>
         </div>
@@ -97,7 +103,7 @@ export default function Hero() {
             <dd className="mt-1 font-medium text-ink"> 2 Papers published</dd>
           </div>
           <div>
-            <dt className="font-mono text-xs uppercase tracking-widest text-muted">Shipped</dt>
+            <dt className="font-mono text-xs uppercase tracking-widest text-muted">Completed</dt>
             <dd className="mt-1 font-medium text-ink">6+ Production apps</dd>
           </div>
           <div>
@@ -112,6 +118,7 @@ export default function Hero() {
           
         </dl>
       </Reveal>
+      {open && <ContactModal onClose={() => setOpen(false)} />}
     </section>
   );
 }
