@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      <Intro />
+      {/* <Intro /> */}
       <Stack />
       <ProjectsGrid />
       <Research />

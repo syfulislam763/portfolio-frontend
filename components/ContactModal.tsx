@@ -56,7 +56,7 @@ export default function ContactModal({ onClose }: { onClose: () => void }) {
       onClick={onClose}
     >
       <div
-        className="w-full max-w-lg overflow-hidden rounded-2xl border border-line bg-surface bg-[#FFCEE3] shadow-2xl"
+        className="w-full max-w-lg overflow-hidden rounded-2xl border border-line  bg-[#FFCEE3] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Tab header — matches project card style */}

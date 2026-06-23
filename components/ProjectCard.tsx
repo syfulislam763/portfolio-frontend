@@ -61,6 +61,16 @@ export default function ProjectCard({ project }: { project: Project }) {
               <GithubIcon className="h-4 w-4" /> Code
             </a>
           )}
+          {project.githubUrl2 && (
+            <a
+              href={project.githubUrl2}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-ink transition-colors hover:text-signal"
+            >
+              <GithubIcon className="h-4 w-4" /> Backend Code
+            </a>
+          )}
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -101,6 +111,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               <PlayIcon className="h-3.5 w-3.5" /> Demo
             </a>
           )}
+          
         </div>
       </div>
     </article>

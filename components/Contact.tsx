@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 import ContactModal from "./ContactModal";
 
 const socials = [
-  { label: "Whatsapp", href: "https://wa.me/8801519609744" },
+  { label: "Whatsapp", href: "https://wa.me/8801782788050" },//https://wa.me/8801519609744
   { label: "GitHub", href: "https://github.com/syfulislam763" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/dev-syful-islam/" },
 ];
