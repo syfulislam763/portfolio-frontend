@@ -10,7 +10,6 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <main>
-      <TechMarquee />
       <Hero />
       {/* <Intro /> */}
       <Stack />

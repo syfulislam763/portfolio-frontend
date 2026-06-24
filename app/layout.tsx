@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import TechMarquee from "@/components/TechMarquee";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="en" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
       <body className="bg-paper text-ink font-sans antialiased">
         <Navbar />
+        <TechMarquee />
         {children}
         <Contact />
         <Footer />
