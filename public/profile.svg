@@ -1,0 +1,8 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="#F7F6F2"/>
+  <rect x="1" y="1" width="798" height="998" fill="none" stroke="#E3E0D7" stroke-width="2"/>
+  <rect x="60" y="60" width="48" height="5" fill="#2547D0"/>
+  <circle cx="400" cy="380" r="120" fill="none" stroke="#15181F" stroke-width="3"/>
+  <path d="M180 820c0-140 100-240 220-240s220 100 220 240" fill="none" stroke="#15181F" stroke-width="3"/>
+  <text x="400" y="930" font-family="'Courier New', monospace" font-size="16" fill="#5B6270" text-anchor="middle">replace this file: /public/profile.jpg</text>
+</svg>

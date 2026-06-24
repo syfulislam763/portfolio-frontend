@@ -1,0 +1,9 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#F7F6F2"/>
+  <rect x="1" y="1" width="1198" height="748" fill="none" stroke="#E3E0D7" stroke-width="2"/>
+  <rect x="60" y="160" width="64" height="6" fill="#2547D0"/>
+  <text x="60" y="250" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="600" fill="#15181F">Sports Data</text>
+  <text x="60" y="310" font-family="'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="600" fill="#15181F">Explorer</text>
+  <text x="60" y="360" font-family="'Courier New', monospace" font-size="20" fill="#5B6270">Next.js &#183; TypeScript &#183; Tailwind CSS</text>
+  <text x="60" y="680" font-family="'Courier New', monospace" font-size="16" fill="#5B6270">replace this file: /public/projects/sports-data-explorer.svg</text>
+</svg>
