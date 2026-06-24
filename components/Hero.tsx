@@ -96,7 +96,7 @@ export default function Hero() {
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              CSE graduate with {yearsOfExperience}+ years of experience engineering production-ready distributed systems. Specializing in robust mobile architectures (React Native/Expo), web (Next.js, React.js), and scalable backend frameworks (Next.js/FastAPI/NestJS). Based in Dhaka, Bangladesh, my focus centers on algorithmic problem-solving, rapid technical adaptation, and cross-functional collaborative engineering.
+              CSE graduate with {yearsOfExperience}+ years of experience engineering production-ready distributed systems. Specializing in robust mobile architectures (React Native/Expo), web (Next.js, React.js), and scalable backend frameworks (FastAPI/NestJS). Based in Dhaka, Bangladesh, my focus centers on algorithmic problem-solving, rapid technical adaptation, and cross-functional collaborative engineering.
             </p>
           </Reveal>
 
